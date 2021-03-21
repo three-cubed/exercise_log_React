@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './stylesheet.css';
 import ExerciseEventList from './components/ExerciseEventList';
 import ExerciseAdder from './components/ExerciseAdder';
@@ -11,23 +11,34 @@ const dummyExerciseData = [
   {id: 555, colour: 'orange', icon: 'tba', exerciseEventTitle: 'Sit-ups', exerciseDate: '7th March 2021', achievement: '60 sit-ups in 2 minutes'},
 ];
 
-function App() {
-  const [exerciseEvents, setExerciseEvents] = useState([dummyExerciseData]);
+const addExerciseEvent = (exerciseEvent) => {
+  console.log(exerciseEvent);
+}
 
-  // const getExerciseEvents = useCallback(() => {
+function App() {
+  // const [exerciseEvents, setExerciseEvents] = useState([dummyExerciseData]);
+
+  // const getExerciseList = useCallback(() => {
   //   fetch('/???')
   //     .then(res => res.json())
   //     .then(setExerciseEvents);
   // });
-  // etc.
-  // etc.
+  // useCallBack above prevents the constant creation of a new object (as in functions are objects)
+  // each time the useEffect is triggered, as that would then trigger the useEffect again,
+  // and an infinite loop would ensure.
+
+  // useEffect(() => {
+  //   getExerciseList();
+  // }, []); 
+  // As the brackets indicating when to do this useEffect are empty, 
+  // the useEffect should only occur on first loading (or on reloading) the page.
 
   return (
     <div className="App">
         <p>
           Log your exercise here!
         </p>
-        <ExerciseAdder />
+        <ExerciseAdder propFuncOnAdd={addExerciseEvent} />
         <br />
         <ExerciseEventList exercises={dummyExerciseData} />
     </div>

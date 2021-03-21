@@ -1,25 +1,22 @@
 const mongoose = require('mongoose');
 
-// {id: 234, colour: 'tba', icon: 'tba', exerciseEventTitle: 'Swimming', exerciseDate: '4th March', achievement: '500 metres'},
-
 const exerciseEventSchema = new mongoose.Schema({
+    exerciseEventTitle: {
+        type: String,
+        required: true,
+    },
+    exerciseDate: {
+        type: String,
+        required: true,
+    },
+    achievement: {
+        type: String,
+    },
     colour: {
         type: String,
         required: true,
     },
     icon: {
-        type: String,
-        required: true,
-    },
-    exerciseEventTitle: {
-        type: String,
-        required: true,
-    },
-    exerciseDate {
-        type: String,
-        required: true,
-    },
-    achievement: {
         type: String,
     },
 });
