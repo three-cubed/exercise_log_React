@@ -1,11 +1,10 @@
 import ExerciseEvent from './ExerciseEvent';
 
-const ExerciseEventList = ({ exercises }) => {
+const ExerciseEventList = ({ exercises, propForUpdating }) => {
     return (
         <>
             {exercises.map((exercise) => (
-                <ExerciseEvent key={exercise.id} 
-                id={exercise.id}
+                <ExerciseEvent key={exercise._id} 
                 icon={exercise.icon}
                 colour={exercise.colour} 
                 exerciseEventTitle={exercise.exerciseEventTitle} 

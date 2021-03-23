@@ -11,7 +11,7 @@
 .exerciseEvent {
   font-size: 1.1rem;
   background-color: white;
-  min-width: 45%;
+  width: 600px;
 }
 
 .formContainer {

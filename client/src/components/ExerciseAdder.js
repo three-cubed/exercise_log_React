@@ -47,12 +47,26 @@ const ExerciseAdder = ({ propFuncOnAdd }) => {
                     onChange={(e) => setAchievement(e.target.value)}
                     />
                 </div>
-                <div>
+                {/* <div>
                     <label>Colour:</label>
                     <input type='text' placeholder='Select a colour for this exercise.' 
                     value={colour} 
                     onChange={(e) => setColour(e.target.value)}
                     />
+                </div> */}
+                <div>
+                <select name="topic" onChange={(e) => setColour(e.target.value)}>
+                        <option value="grey">Grey</option>
+                        <option value="black">Black</option>
+                        <option value="firebrick">Red</option>
+                        <option value="coral">Orange</option>
+                        <option value="gold">Yellow</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="purple">Purple</option>
+                        <option value="pink">Pink</option>
+                        <option value="saddlebrown">Brown</option>
+                </select>
                 </div>
                 <button type='submit' id='submissionBtn'>Save exercise event!</button>
             </form>
