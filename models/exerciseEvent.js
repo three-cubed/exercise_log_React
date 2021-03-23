@@ -14,7 +14,7 @@ const exerciseEventSchema = new mongoose.Schema({
     },
     colour: {
         type: String,
-        required: true,
+        default: 'grey',
     },
     icon: {
         type: String,

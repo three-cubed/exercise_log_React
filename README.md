@@ -10,7 +10,7 @@ The application's basic concept is to allow a user to record the exercise they h
 ### Development notes
 During development, various aspects (data/pages/components etc.) will be dummy features for purposes of development and experimentation.
 
-The code will contain various commented-out notes to myself to clarify the React code.
+The code will contain various commented-out notes to myself to clarify the React code for future reference.
 
 The initial set-up uses the standard create-react-app package from NPM in the client sub-directory (including the various boilerplates!)
 

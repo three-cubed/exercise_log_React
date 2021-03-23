@@ -1,23 +1,11 @@
 import React, { useState } from 'react';
 
-// const submitExerciseEvent = event => {
-//     event.preventDefault();
-//     fetch('/???', {
-//         method: 'post',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({ etc. }),
-//       }).then(() => {
-//         setNewExerciseEvent('');
-//         getExerciseList();
-//       });
-// };
-
 // propFuncOnAdd below is the prop added to the ExerciseAdder component in the App.js page.
 const ExerciseAdder = ({ propFuncOnAdd }) => {
     const [exerciseEventTitle, setExerciseEventTitle] = useState('');
     const [exerciseDate, setExerciseDate] = useState('');
     const [achievement, setAchievement] = useState('');
-    const [colour, setColour] = useState('grey');
+    const [colour, setColour] = useState('');
 
     const submitExerciseEvent = (e) => {
         e.preventDefault(); // Prevents submit to a page.
