@@ -15,10 +15,11 @@ const ExerciseAdder = ({ propFuncOnAdd }) => {
         }
         propFuncOnAdd({ exerciseEventTitle, exerciseDate, achievement, colour });
         // Then revert to default non-values
-        setExerciseEventTitle('');
-        setExerciseDate('');
-        setAchievement('');
-        setColour('');
+        // setExerciseEventTitle('');
+        // setExerciseDate('');
+        // setAchievement('');
+        // setColour(e.target.value);
+        window.location.reload();
     }
 
     return (
@@ -55,8 +56,9 @@ const ExerciseAdder = ({ propFuncOnAdd }) => {
                     />
                 </div> */}
                 <div>
+                <label>Exercise colour:</label>
                 <select name="topic" onChange={(e) => setColour(e.target.value)}>
-                        <option value="grey">Grey</option>
+                        <option selected value="grey">Grey</option>
                         <option value="black">Black</option>
                         <option value="firebrick">Red</option>
                         <option value="coral">Orange</option>
