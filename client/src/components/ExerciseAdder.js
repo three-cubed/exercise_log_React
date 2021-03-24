@@ -15,11 +15,11 @@ const ExerciseAdder = ({ propFuncOnAdd }) => {
         }
         propFuncOnAdd({ exerciseEventTitle, exerciseDate, achievement, colour });
         // Then revert to default non-values
-        // setExerciseEventTitle('');
-        // setExerciseDate('');
-        // setAchievement('');
-        // setColour(e.target.value);
-        window.location.reload();
+        setExerciseEventTitle('');
+        setExerciseDate('');
+        setAchievement('');
+        // colour can be left as it is (which is as it is displayed) 
+        // window.location.reload(); (an alternative to resetting values; effective but not the idea of React)
     }
 
     return (

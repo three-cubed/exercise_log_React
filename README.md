@@ -7,15 +7,15 @@ i.e. a full-stack application using **M**ongoDB + **E**xpress + **R**eact + **N*
 The application's basic concept is to allow a user to record the exercise they have done. 
 
 ### Current situation
-The application's abilities at the moment:
+The application's capabilities at the moment:
 - Create records on the database: fully functional.
 - Read and display records from the database: fully functional.
 - Delete and update records: not yet added.
 
 ### General development notes
-During development, various aspects (data/pages/components etc.) will be dummy features for purposes of development and experimentation.
+During development, various dummy features (data/pages/components etc.) will be used for purposes of development and experimentation.
 
-The code will contain various commented-out notes to myself to clarify the React code for future reference.
+The code will contain various commented-out notes to myself to clarify the React code for future reference. There will be probably some unusual variable names for the same reason.
 
 The initial set-up uses the standard create-react-app package from NPM in the client sub-directory (including the various boilerplates!)
 
