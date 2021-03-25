@@ -1,6 +1,7 @@
 .env
 node_modules
 dummies.txt
+NOTES_TO_SELF.txt
 
 # NPM create-react-app boilerplate for .gitignore:
 

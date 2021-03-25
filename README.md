@@ -18,5 +18,8 @@ The code will contain various commented-out notes to myself to clarify the React
 
 The initial set-up uses the standard create-react-app package from NPM in the client sub-directory (including the various boilerplates!)
 
+### Usage notes
+The command `npm start` must be used on both the root directory and the client directory.
+
 Port 5005 is indicated as proxy in /client/package.json 
 The proxy indicates the URL for server.js, to be changed if appropriate. 

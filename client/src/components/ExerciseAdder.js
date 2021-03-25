@@ -63,7 +63,9 @@ const ExerciseAdder = ({ propFuncOnAdd }) => {
                         <option value="saddlebrown">Brown</option>
                 </select>
                 </div>
-                <button type='submit' id='submissionBtn'>Save exercise event!</button>
+                <button type='submit' id='submissionBtn'>
+                    Save exercise event!
+                </button>
             </form>
         </div>
     )

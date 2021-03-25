@@ -6,7 +6,7 @@ const ExerciseEvent = (props) => {
         console.log(`Delete clicked for ${exerciseEventId}`)  
         // must await fetch or callback will get App.js to run getExerciseList before the deletion has taken place. 
         await fetch(`/delete/${exerciseEventId}`, {
-          method: 'delete',
+            method: 'delete',
         });
         callback();
     };
@@ -26,6 +26,7 @@ const ExerciseEvent = (props) => {
             </div>
             <br />
         </>
-)}
+    )
+}
 
 export default ExerciseEvent;
