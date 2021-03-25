@@ -41,3 +41,16 @@
   border-radius: 22%;
   max-width: 250px;
 }
+
+.deleteX {
+  background-color: firebrick;
+  color: white;
+  position: relative;
+  left: 94%;
+  bottom: 6vh;
+  font-size:14px;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}

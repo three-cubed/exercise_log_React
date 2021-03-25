@@ -21,6 +21,10 @@ function App() {
     // As the brackets indicating when to do this useEffect are empty, 
     // the useEffect should only occur on first loading (or on reloading) the page.
 
+    const restateAfterDelete = () => {
+      getExerciseList();
+    }
+
     const addExerciseEvent = ( propFuncOnAddArguments ) => {
       console.log(propFuncOnAddArguments);
       fetch('/exercisePost', {
@@ -28,11 +32,10 @@ function App() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(propFuncOnAddArguments)
       }).then(() => {
-          console.log('New exercise event hopefully posted to database!');
           getExerciseList();
       });
-  }
-
+    }
+    
     return (
       <div className="App">
           <p>
@@ -40,7 +43,9 @@ function App() {
           </p>
           <ExerciseAdder propFuncOnAdd={addExerciseEvent} />
           <br />
-          <ExerciseEventList exercises={exerciseEvents} propForUpdating={getExerciseList} />
+          <ExerciseEventList 
+              exercises={exerciseEvents} 
+              restateAfterDelete={restateAfterDelete}/>
       </div>
     );
 }

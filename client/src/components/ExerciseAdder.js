@@ -48,17 +48,10 @@ const ExerciseAdder = ({ propFuncOnAdd }) => {
                     onChange={(e) => setAchievement(e.target.value)}
                     />
                 </div>
-                {/* <div>
-                    <label>Colour:</label>
-                    <input type='text' placeholder='Select a colour for this exercise.' 
-                    value={colour} 
-                    onChange={(e) => setColour(e.target.value)}
-                    />
-                </div> */}
                 <div>
                 <label>Exercise colour:</label>
                 <select name="topic" onChange={(e) => setColour(e.target.value)}>
-                        <option selected value="grey">Grey</option>
+                        <option value="grey">Grey</option>
                         <option value="black">Black</option>
                         <option value="firebrick">Red</option>
                         <option value="coral">Orange</option>
