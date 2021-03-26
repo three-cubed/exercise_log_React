@@ -1,4 +1,6 @@
-This repository is **work in progress**!
+This application is functional! 
+
+There are, however, various improvements that I wish to make, and various features that I wish to introduce, and in that sense it is an on-going project.
 
 ### Project overview
 This is a simple "MERN stack" application, 

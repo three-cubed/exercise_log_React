@@ -28,44 +28,47 @@ const ExerciseAdder = ({ propFuncOnAdd }) => {
                 onSubmit={submitExerciseEvent}
             >
                 <div>
-                    <label>Exercise:</label>
+                    <br /><label>Exercise:</label><br />
                     <input type='text' placeholder='What was the exercise?' 
                     value={exerciseEventTitle} 
                     onChange={(e) => setExerciseEventTitle(e.target.value)}
                     />
                 </div>
                 <div>
-                    <label>Day:</label>
+                    <br /><label>Day:</label><br />
                     <input type='text' placeholder='When did you do it?' 
                     value={exerciseDate} 
                     onChange={(e) => setExerciseDate(e.target.value)}
                     />
                 </div>
                 <div>
-                    <label>Achievement:</label>
+                    <br /><label>Achievement:</label><br />
                     <input type='text' placeholder='What did you manage to do?' 
                     value={achievement} 
                     onChange={(e) => setAchievement(e.target.value)}
                     />
                 </div>
                 <div>
-                <label>Exercise colour:</label>
-                <select name="topic" onChange={(e) => setColour(e.target.value)}>
-                        <option value="grey">Grey</option>
-                        <option value="black">Black</option>
-                        <option value="firebrick">Red</option>
-                        <option value="coral">Orange</option>
-                        <option value="gold">Yellow</option>
-                        <option value="green">Green</option>
-                        <option value="blue">Blue</option>
-                        <option value="purple">Purple</option>
-                        <option value="pink">Pink</option>
-                        <option value="saddlebrown">Brown</option>
-                </select>
+                    <br /><label>Exercise colour:</label><br />
+                    <select name="topic" onChange={(e) => setColour(e.target.value)}>
+                            <option value="grey">Grey</option>
+                            <option value="black">Black</option>
+                            <option value="firebrick">Red</option>
+                            <option value="coral">Orange</option>
+                            <option value="gold">Yellow</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                            <option value="purple">Purple</option>
+                            <option value="pink">Pink</option>
+                            <option value="saddlebrown">Brown</option>
+                    </select>
                 </div>
-                <button type='submit' id='submissionBtn'>
-                    Save exercise event!
-                </button>
+                <br />
+                <div className='centred'>
+                    <button type='submit' id='submissionBtn'>
+                        Save new exercise event!
+                    </button>
+                </div>
             </form>
         </div>
     )

@@ -2,9 +2,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './stylesheet.css';
 import ExerciseEventList from './components/ExerciseEventList';
 import ExerciseAdder from './components/ExerciseAdder';
+import TitleBlock from './components/TitleBlock';
 
 function App() {
     const [exerciseEvents, setExerciseEvents] = useState([]);
+    const [showForm, setShowForm] = useState(false);
 
     const getExerciseList = useCallback(() => {
         fetch('/getExercise')
@@ -20,6 +22,10 @@ function App() {
     }, []); 
     // As the brackets indicating when to do this useEffect are empty, 
     // the useEffect should only occur on first loading (or on reloading) the page.
+
+    const executeOnClick = () => {
+        setShowForm(!showForm);
+    }
 
     const restateAfterDelete = () => {
         getExerciseList();
@@ -37,17 +43,24 @@ function App() {
     }
     
     return (
-      <div className="App">
-          <p>
-              Log your exercise here!
-          </p>
-          <ExerciseAdder propFuncOnAdd={addExerciseEvent} />
-          <br />
-          <ExerciseEventList 
-              exercises={exerciseEvents} 
-              restateAfterDelete={restateAfterDelete}
-          />
-      </div>
+        <div className="App">
+            <TitleBlock 
+                onClick={executeOnClick}   
+                btnText={showForm ? 'Cancel new exercise event' : 'Add a new exercise event'}  
+                btnColour={showForm ? ' #ffcc99' : 'rgba(103, 189, 103, 0.74)'}
+            />
+            {
+            showForm    
+            &&
+            <ExerciseAdder propFuncOnAdd={addExerciseEvent} />
+            }
+            {showForm && <br />}
+            <br />
+            <ExerciseEventList 
+                exercises={exerciseEvents} 
+                restateAfterDelete={restateAfterDelete}
+            />
+        </div>
     );
 }
 
