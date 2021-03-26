@@ -1,19 +1,30 @@
-This application is functional. There are, however, various improvements that I wish to make, and various features that I wish to introduce, and in that sense it is an on-going project.
+This application is fully functional and ready to use. There are, however, various improvements that I wish to make, and various features that I wish to introduce, so this is an on-going project.
 
 ### Project overview
 This is a simple "MERN stack" application, 
 i.e. a full-stack application using **M**ongoDB + **E**xpress + **R**eact + **N**odeJS. 
-The application's basic concept is to allow a user to record the exercise they have done as 'exercise events'. 
+The basic concept of the application is to allow a user to record the exercise they have done.
 
-Users can create records saved on the database, display records from the database, and delete records. 
-
-### General notes
-During development, various dummy features (data/pages/components etc.) will be used for purposes of development and experimentation.
-
-The initial set-up uses the standard create-react-app package from NPM in the client sub-directory (including the various boilerplates!)
+Users can create records of their exercise as 'exercise events' which are saved on the database. 
+The application displays existing records from the database. 
+The user can also delete any existing records. 
 
 ### Usage notes
-The command `npm start` must be used on both the root directory and the client directory.
+To use this application, you must have installed Node.js.
 
-Port 5005 is indicated as proxy in /client/package.json 
-The proxy indicates the URL for server.js, to be changed if appropriate. 
+Before first use, the command `npm install` must be used on both the root directory and the client directory.
+
+The application uses MongoDB. 
+A `.env` file will need to created in the root directory, containing `DATABASE_URL=` followed by a valid MongoDB URL.
+For example, if MongoDB is installed locally, `DATABASE_URL=mongodb://localhost/my_exercise_log` could be used.
+If you are using MongoDB in the cloud, your account will provide a connection string to use here.
+
+To run the apllication, the command `npm start` must be used on both the root directory and the client directory.
+
+Port 5005 is indicated as proxy in `/client/package.json`. 
+The proxy indicates the URL for server.js, to be changed if appropriate/desired. 
+
+### Other notes
+During development phases, various dummy features (data/pages/components etc.) are/were used for purposes of development and experimentation.
+
+The initial set-up uses the standard create-react-app package from NPM in the client sub-directory (including the various boilerplates!)
