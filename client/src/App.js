@@ -13,15 +13,10 @@ function App() {
           .then(res => res.json())
           .then(setExerciseEvents);
     });
-    // useCallBack above prevents the constant creation of a new object (as in functions are objects)
-    // each time the useEffect is triggered, as that would then trigger the useEffect again,
-    // and an infinite loop would ensure.
 
     useEffect(() => {
         getExerciseList();
     }, []); 
-    // As the brackets indicating when to do this useEffect are empty, 
-    // the useEffect should only occur on first loading (or on reloading) the page.
 
     const executeOnClick = () => {
         setShowForm(!showForm);
@@ -31,12 +26,11 @@ function App() {
         getExerciseList();
     }
 
-    const addExerciseEvent = ( propFuncOnAddArguments ) => {
-        console.log(propFuncOnAddArguments);
+    const addExerciseEvent = ( addExerciseEventArguments ) => {
         fetch('/exercisePost', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(propFuncOnAddArguments)
+            body: JSON.stringify(addExerciseEventArguments)
         }).then(() => {
             getExerciseList();
         });
@@ -52,7 +46,7 @@ function App() {
             {
             showForm    
             &&
-            <ExerciseAdder propFuncOnAdd={addExerciseEvent} />
+            <ExerciseAdder addExerciseEvent={addExerciseEvent} />
             }
             {showForm && <br />}
             <br />

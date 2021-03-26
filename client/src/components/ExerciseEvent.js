@@ -2,9 +2,7 @@ import React from 'react';
 
 const ExerciseEvent = (props) => {
     const deleteExercise = async (event, exerciseEventId, callback) => {
-        event.preventDefault(); 
-        console.log(`Delete clicked for ${exerciseEventId}`)  
-        // must await fetch or callback will get App.js to run getExerciseList before the deletion has taken place. 
+        event.preventDefault();
         await fetch(`/delete/${exerciseEventId}`, {
             method: 'delete',
         });
@@ -16,12 +14,12 @@ const ExerciseEvent = (props) => {
                 <p> 
                     &emsp; <small>{props.exerciseDate}</small>
                     &emsp; <b>{props.exerciseEventTitle}</b>&emsp;&emsp;&emsp; <br />
-                    &emsp; {props.achievement}
-                    <p className='deleteX'
+                    <span className='deleteX'
                     onClick={event => deleteExercise(event, props.id, props.restateAfterDelete)}
                     > 
-                    X
-                    </p>
+                    &ensp;X&ensp;
+                    </span>
+                    &emsp; {props.achievement}
                 </p>
             </div>
             <br />

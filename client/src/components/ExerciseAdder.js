@@ -1,25 +1,22 @@
 import React, { useState } from 'react';
 
-// propFuncOnAdd below is the prop added to the ExerciseAdder component in the App.js page.
-const ExerciseAdder = ({ propFuncOnAdd }) => {
+const ExerciseAdder = ({ addExerciseEvent }) => {
     const [exerciseEventTitle, setExerciseEventTitle] = useState('');
     const [exerciseDate, setExerciseDate] = useState('');
     const [achievement, setAchievement] = useState('');
     const [colour, setColour] = useState('');
 
     const submitExerciseEvent = (e) => {
-        e.preventDefault(); // Prevents submit to a page.
+        e.preventDefault();
         if (!exerciseEventTitle || !exerciseDate) {
             alert('Make sure you have added an exercise event and when you did it!');
             return;
         }
-        propFuncOnAdd({ exerciseEventTitle, exerciseDate, achievement, colour });
-        // Then revert to default non-values
+        addExerciseEvent({ exerciseEventTitle, exerciseDate, achievement, colour });
         setExerciseEventTitle('');
         setExerciseDate('');
         setAchievement('');
         // colour can be left as it is (which is as it is displayed) 
-        // window.location.reload(); (an alternative to resetting values; effective but not the idea of React)
     }
 
     return (
