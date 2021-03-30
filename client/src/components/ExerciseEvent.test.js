@@ -23,10 +23,4 @@ describe('ExerciseEvent component', () => {
         const renderExerciseEvent = render(<ExerciseEvent colour={'blue'} />);
         expect(renderExerciseEvent.getByTestId('exerciseEvent')).toHaveStyle('color: blue');
     });
-    test('pressing deleteX sets off function', () => {
-        const performFunction = jest.fn();
-        const renderExerciseEvent = render(<ExerciseEvent onClick={performFunction()} />);
-        fireEvent.click(renderExerciseEvent.getByTestId('deleteX'));
-        expect(performFunction).toBeCalled();
-    });
 })

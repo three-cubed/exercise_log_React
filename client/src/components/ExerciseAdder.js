@@ -22,7 +22,7 @@ const ExerciseAdder = ({ addExerciseEvent }) => {
     return (
         <div className='formContainer'>
             <form id='exerciseAdderForm' 
-                data-testid='exerciseForm' 
+                data-testid='exerciseAdderForm' 
                 onSubmit={submitExerciseEvent}
             >
                 <div>
@@ -63,7 +63,7 @@ const ExerciseAdder = ({ addExerciseEvent }) => {
                 </div>
                 <br />
                 <div className='centred'>
-                    <button type='submit' id='submissionBtn'>
+                    <button type='submit' id='submissionBtn' data-testid='submissionBtn'>
                         Save new exercise event!
                     </button>
                 </div>
