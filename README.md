@@ -1,7 +1,7 @@
 This application is fully functional and ready to use. There are, however, various improvements that I wish to make, and various features that I wish to introduce, so this is an on-going project.
 
 ### Project overview
-This is a simple "MERN stack" application, 
+This is a relatively simple "MERN stack" application, 
 i.e. a full-stack application using **M**ongoDB + **E**xpress + **R**eact + **N**odeJS. 
 The basic concept of the application is to allow a user to record the exercise they have done.
 

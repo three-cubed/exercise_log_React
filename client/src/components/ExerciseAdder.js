@@ -22,18 +22,19 @@ const ExerciseAdder = ({ addExerciseEvent }) => {
     return (
         <div className='formContainer'>
             <form id='exerciseAdderForm' 
+                data-testid='exerciseForm' 
                 onSubmit={submitExerciseEvent}
             >
                 <div>
                     <br /><label>Exercise:</label><br />
-                    <input type='text' placeholder='What was the exercise?' 
+                    <input type='text' placeholder='What was the exercise?' aria-label="titleInput" 
                     value={exerciseEventTitle} 
                     onChange={(e) => setExerciseEventTitle(e.target.value)}
                     />
                 </div>
                 <div>
                     <br /><label>Day:</label><br />
-                    <input type='text' placeholder='When did you do it?' 
+                    <input type='text' placeholder='When did you do it?' aria-label="dateInput" 
                     value={exerciseDate} 
                     onChange={(e) => setExerciseDate(e.target.value)}
                     />

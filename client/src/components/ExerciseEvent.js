@@ -10,16 +10,20 @@ const ExerciseEvent = (props) => {
     };
     return (
         <>
-            <div className='exerciseEvent' style={{ color: props.colour, borderLeft: 'solid 16px', borderBottom: 'solid 2px' }}>
+            <div className='exerciseEvent' data-testid='exerciseEvent' style={{ color: props.colour, borderLeft: 'solid 16px', borderBottom: 'solid 2px' }}>
                 <p> 
-                    &emsp; <small>{props.exerciseDate}</small>
+                    &emsp; <small>{props.exerciseDate}</small><br />
                     &emsp; <b>{props.exerciseEventTitle}</b>&emsp;&emsp;&emsp; <br />
-                    <span className='deleteX'
-                    onClick={event => deleteExercise(event, props.id, props.restateAfterDelete)}
+                    <button 
+                        className='deleteX' 
+                        data-testid='deleteX' 
+                        onClick={event => deleteExercise(event, props.id, props.restateAfterDelete)}
                     > 
-                    &ensp;X&ensp;
+                    X
+                    </button>
+                    <span className='achievementSpan'>
+                        &emsp; {props.achievement}
                     </span>
-                    &emsp; {props.achievement}
                 </p>
             </div>
             <br />

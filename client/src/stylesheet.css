@@ -52,12 +52,12 @@
     background-color: firebrick;
     color: white;
     position: relative;
-    left: 94%;
-    bottom: 6vh;
-    font-size:14px;
-    text-align: center;
-    width: 15px;
+    left: 93%;
+    bottom: 56px;
+    font-size:9px;
+    /* text-align: center; */
     height: 15px;
+    width: 22px; 
     cursor: pointer;
 }
 
@@ -76,4 +76,9 @@ select {
     top: -2.5vh;
     border-radius: 22%;
     outline: none;
+}
+
+.achievementSpan {
+    position: relative;
+    left: -22px;
 }
