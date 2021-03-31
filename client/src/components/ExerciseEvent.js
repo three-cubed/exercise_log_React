@@ -15,8 +15,8 @@ const ExerciseEvent = (props) => {
                     &emsp; <small>{props.exerciseDate}</small><br />
                     &emsp; <b>{props.exerciseEventTitle}</b>&emsp;&emsp;&emsp; <br />
                     <button 
-                        className='deleteX' 
-                        data-testid='deleteX' 
+                        className='deletionBtn' 
+                        data-testid='deletionBtn' 
                         onClick={event => deleteExercise(event, props.id, props.restateAfterDelete)}
                     > 
                     X

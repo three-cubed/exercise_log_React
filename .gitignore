@@ -1,6 +1,7 @@
 .env
 node_modules
 dummies.txt
+dummies.js
 NOTES_TO_SELF.txt
 __mocks__
 

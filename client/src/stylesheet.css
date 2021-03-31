@@ -48,7 +48,7 @@
     font-size: 1.2rem;
 }
 
-.deleteX {
+.deletionBtn {
     background-color: firebrick;
     color: white;
     position: relative;

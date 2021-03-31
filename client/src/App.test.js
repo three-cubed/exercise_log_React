@@ -1,30 +1,42 @@
 import React from 'react';
 import App from './App';
 import { cleanup, fireEvent, render } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 
 afterEach(cleanup);
 
-test('renders', () => {
-    render(<App />);
-})
+describe('App component', () => {
+    test('renders', () => {
+        render(<App />);
+    })
+    test('matches snapshot', () => {
+        const tree = renderer.create(<App />).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+});
 
-describe('App using ExerciseAdder form', () => {
-    test('does not show form (by test id) before top btn click', () => {
-        const renderApp = render(<App />);
-        expect(renderApp.queryByTestId('exerciseAdderForm')).toBeNull();
+describe('App uses ExerciseAdder form', () => {
+    test('does not show form (ByTestId) before top btn click', () => {
+        const newApp = render(<App />);
+        expect(newApp.queryByTestId('exerciseAdderForm')).toBeNull();
     });
-    test('shows form (by test id) after top btn click', () => {
-        const renderApp = render(<App />);
-        fireEvent.click(renderApp.getByText(/add a new exercise/i));
-        expect(renderApp.getByTestId('exerciseAdderForm'));
+    test('shows form (ByTestId) after top btn click', () => {
+        const newApp = render(<App />);
+        fireEvent.click(newApp.getByText(/add a new exercise/i));
+        expect(newApp.getByTestId('exerciseAdderForm')).not.toBeNull();
     });
-    test('does not show submit btn (by text) before top btn click', () => {
-        const renderApp = render(<App />);
-        expect(renderApp.queryByText(/Save new exercise event/i)).toBeNull();
+    test('does not show submit btn (ByText) before top btn click', () => {
+        const newApp = render(<App />);
+        expect(newApp.queryByText(/Save new exercise event/i)).toBeNull();
     });
-    test('shows submit btn (by text) after top btn click', () => {
-        const renderApp = render(<App />);
-        fireEvent.click(renderApp.getByText(/Add a new exercise/i));
-        expect(renderApp.getByText(/Save new exercise event/i));
+    test('shows submit btn (ByText) after top btn click', () => {
+        const newApp = render(<App />);
+        fireEvent.click(newApp.getByText(/Add a new exercise/i));
+        expect(newApp.getByText(/Save new exercise event/i)).not.toBeNull();
     });
+    // test('shows submit btn (by text) after top btn click', () => {
+    //     const newApp = render(<App />);
+    //     fireEvent.click(newApp.getByText(/Add a new exercise/i));
+    //     expect(newApp.getByText(/Save new exercise event/i));
+    // });
 });

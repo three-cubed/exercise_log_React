@@ -19,10 +19,13 @@ A `.env` file will need to created in the root directory, containing `DATABASE_U
 For example, if MongoDB is installed locally, `DATABASE_URL=mongodb://localhost/my_exercise_log` could be used.
 If you are using MongoDB in the cloud, your account will provide a connection string to use here.
 
-To run the apllication, the command `npm start` must be used on both the root directory and the client directory.
+To run the application, the command `npm start` must be used on both the root directory and the client directory.
 
 Port 5005 is indicated as proxy in `/client/package.json`. 
 The proxy indicates the URL for server.js, to be changed if appropriate/desired. 
+
+### Tests 
+The application is not particularly complicated, but I have been writing tests which can be found in `/client/src/components/__tests__` and in `/client/src/App.test.js`. They can be run in the *client* directory by using `npm test`, or, for a more verbose version, `npm test -- --verbose`.
 
 ### Other notes
 During development phases, various dummy features (data/pages/components etc.) are/were used for purposes of development and experimentation.
