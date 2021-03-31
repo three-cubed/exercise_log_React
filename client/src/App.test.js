@@ -34,9 +34,4 @@ describe('App uses ExerciseAdder form', () => {
         fireEvent.click(newApp.getByText(/Add a new exercise/i));
         expect(newApp.getByText(/Save new exercise event/i)).not.toBeNull();
     });
-    // test('shows submit btn (by text) after top btn click', () => {
-    //     const newApp = render(<App />);
-    //     fireEvent.click(newApp.getByText(/Add a new exercise/i));
-    //     expect(newApp.getByText(/Save new exercise event/i));
-    // });
 });
