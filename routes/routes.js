@@ -11,7 +11,6 @@ router.get('/getExercise', (req, res) => {
 });
 
 router.post('/exercisePost', (req, res) => {
-    // const { newInfo } = req.body;
     if (req.body.colour === '') {
         colour = undefined;  // Must be strictly undefined for default specified in the DB schema to apply.
     } else {
@@ -33,6 +32,6 @@ router.delete('/delete/:id', (req, res) => {
     ExerciseEvent.findByIdAndDelete(id)
       .then(task => res.json(task))
       .catch(err => res.json(500, err));
-  });
+});
 
 module.exports = router;

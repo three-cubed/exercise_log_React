@@ -14,8 +14,7 @@ const ExerciseEventList = ({ exercises, restateAfterDelete }) => {
                 achievement={exercise.achievement} 
                 restateAfterDelete={restateAfterDelete}
                 />
-            ))
-            }
+            ))}
         </>
     )
 }
