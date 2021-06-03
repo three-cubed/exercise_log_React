@@ -21,6 +21,6 @@ const exerciseEventSchema = new mongoose.Schema({
     },
 });
 
-// NB: icon is for future development
+// NB: icon is included for future development
 
 module.exports = mongoose.model('exerciseEvent', exerciseEventSchema);

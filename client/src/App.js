@@ -40,7 +40,7 @@ function App() {
         <div className="App">
             <TitleBlock 
                 onClick={executeOnClick}   
-                btnText={showForm ? 'Cancel new exercise event' : 'Add a new exercise event'}  
+                btnText={showForm ? 'Close new exercise event' : 'Add a new exercise event'}  
                 btnColour={showForm ? ' #ffcc99' : 'rgba(103, 189, 103, 0.74)'}
             />
             {

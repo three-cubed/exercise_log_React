@@ -2,9 +2,9 @@ This application is fully functional and ready to use. There are, however, vario
 
 ### Project overview
 This is a relatively simple "MERN stack" application, 
-i.e. a full-stack application using **M**ongoDB + **E**xpress + **R**eact + **N**odeJS. 
-The basic concept of the application is to allow a user to record the exercise they have done.
+i.e. a full-stack application using **M**ongoDB + **E**xpress + **R**eact + **N**ode.js. 
 
+The basic concept of the application is to allow a user to record the exercise they have done.
 Users can create records of their exercise as 'exercise events' which are saved on the database. 
 The application displays existing records from the database. 
 The user can also delete any existing records. 
@@ -30,4 +30,4 @@ The application is not particularly complicated, but I have been writing tests w
 ### Other notes
 During development phases, various dummy features (data/pages/components etc.) are/were used for purposes of development and experimentation.
 
-The initial set-up uses the standard create-react-app package from NPM in the client sub-directory (including the various boilerplates!)
+The initial set-up uses the standard create-react-app package from NPM in the client directory.
